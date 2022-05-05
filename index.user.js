@@ -20,7 +20,7 @@
     // const homePage = /^(http(s)?:\/\/)?(www\.)?twitch.tv(\/)?$/giu;
     // const followingPage = /^(http(s)?:\/\/)?(www\.)?twitch.tv\/directory\/following$/giu;
     const maxIterations = 10;
-    const extensions = ["Stream Closed Captioner", "Ctrl+ Stream Kit"];
+    const extensions = ["Stream Closed Captioner", "Ctrl+ Stream Kit", "Smart Click Maps"];
 
     let iterations = 0;
     let oldHref = document.location.href;

@@ -5,6 +5,7 @@
 // @description     Twitch utilities
 // @author          Pepijn98
 // @match           https://www.twitch.tv/*
+// @icon            https://www.google.com/s2/favicons?sz=64&domain=twitch.tv
 // @grant           none
 
 // @homepageURL     https://github.com/Pepijn98/twitch-utilities

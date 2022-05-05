@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name            Twitch Utilities
-// @namespace       twitch-utilities
-// @version         1.0.0
-// @description     Redirect to live channels, pause player on homescreen, click player to pause stream
+// @name            UtilsTV
+// @namespace       utilstv
+// @version         1.1.0
+// @description     Twitch utilities
 // @author          Pepijn98
 // @match           https://www.twitch.tv/*
 // @grant           none

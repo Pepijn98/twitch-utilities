@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            UtilsTV
 // @namespace       utilstv
-// @version         1.1.0
+// @version         1.1.1
 // @description     Twitch utilities
 // @author          Pepijn98
 // @match           https://www.twitch.tv/*

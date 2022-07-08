@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name            UtilsTV
-// @namespace       utilstv
-// @version         1.2.1
-// @description     Twitch utilities
-// @author          Pepijn98
+// @namespace       https://vdbroek.dev
+// @version         1.2.2
+// @description     Auto disable overlay extensions & Pause player on channel home page
+// @author          Pepijn98 <pepijn@vdbroek.dev>
 // @match           https://www.twitch.tv/*
 // @icon            https://www.google.com/s2/favicons?sz=64&domain=twitch.tv
 // @grant           none
@@ -67,9 +67,9 @@
             .filter((e) => e.innerText.toLowerCase() === "offline" || e.innerText.toLowerCase() === "hosting")[0];
 
         if (isOffline) {
-            const isChannelHome = document.querySelector("[data-a-page-loaded-name=\"ChannelHomePage\"]");
+            const isChannelHome = document.querySelector("[data-a-page-loaded-name='ChannelHomePage']");
             if (isChannelHome) {
-                const btn = document.querySelector("button[data-a-target=\"player-play-pause-button\"]");
+                const btn = document.querySelector("button[data-a-target='player-play-pause-button']");
                 if (btn) {
                     btn.click();
                 }
@@ -89,7 +89,7 @@
                 pausePlayer();
 
                 //! Disable extension
-                const isChannelWatch = document.querySelector("[data-a-page-loaded-name=\"ChannelWatchPage\"]");
+                const isChannelWatch = document.querySelector("[data-a-page-loaded-name='ChannelWatchPage']");
                 if (isChannelWatch) {
                     const timer = setInterval(function () {
                         if (iterations >= maxIterations) {

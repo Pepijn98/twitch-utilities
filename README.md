@@ -1,11 +1,9 @@
 # twitch-utilities
-Redirect to live channels, pause player on homescreen, click player to pause stream
+Auto disable overlay extensions & Pause player on channel home page
 
 ## Installing
-- <img src="https://b.catgirlsare.sexy/J9MZtFkm.png" width="25"> **Firefox**
-  - Install [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) or [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
+You need to have an extension that can load userscripts installed. \
+For firefox either install [Tampermonkey](https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/) or [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) \
+For any chromium based browser (chrome/edge/vivaldi) install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
 
-- <img src="https://b.catgirlsare.sexy/nIl5pCb1.png" width="25"> **Chrome/Chromium**
-  - Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
- 
- Install the script from [here](https://raw.githubusercontent.com/Pepijn98/twitch-utilities/master/index.user.js)
+Get the userscript from here (https://github.com/Pepijn98/twitch-utilities/raw/master/index.user.js) this should prompt you to an install screen.

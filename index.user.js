@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name            UtilsTV
 // @namespace       utilstv
-// @version         1.2.0
+// @version         1.2.1
 // @description     Twitch utilities
 // @author          Pepijn98
 // @match           https://www.twitch.tv/*
@@ -16,7 +16,9 @@
 // @run-at document-idle
 // ==/UserScript==
 
-(function() {
+(function () {
+    "use strict";
+
     const maxIterations = 10;
 
     let iterations = 0;
@@ -43,7 +45,7 @@
                 // Close ext if it doesn't have a visible switch
                 extension.click();
                 console.log(
-                    `%c[UTV] %c[WARN]: %cCouldn't find any extensions`,
+                    "%c[UTV] %c[WARN]: %cCouldn't find any extensions",
                     "color: #00d1b2",
                     "color: #ffdd57",
                     ""
@@ -51,7 +53,7 @@
             }
         } else {
             console.log(
-                `%c[UTV] %c[WARN]: %cCouldn't find any extensions`,
+                "%c[UTV] %c[WARN]: %cCouldn't find any extensions",
                 "color: #00d1b2",
                 "color: #ffdd57",
                 ""
@@ -61,7 +63,9 @@
 
     function pausePlayer() {
         //! Stop player on channel home page when streamer is offline
-        const isOffline = Array.from(document.getElementsByTagName("p")).filter((e) => e.innerText.toLowerCase() === "offline")[0];
+        const isOffline = Array.from(document.getElementsByTagName("p"))
+            .filter((e) => e.innerText.toLowerCase() === "offline" || e.innerText.toLowerCase() === "hosting")[0];
+
         if (isOffline) {
             const isChannelHome = document.querySelector("[data-a-page-loaded-name=\"ChannelHomePage\"]");
             if (isChannelHome) {
@@ -73,11 +77,11 @@
         }
     }
 
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
         pausePlayer();
         disableExtension();
 
-        new MutationObserver(function() {
+        new MutationObserver(function () {
             if (oldHref !== document.location.href) {
                 oldHref = document.location.href;
                 console.log(`%c[UTV] %c[INFO]: %cChanged page to %c${document.location.href}`, "color: #00d1b2", "color: #209cee", "", "font-weight: bold");
@@ -87,7 +91,7 @@
                 //! Disable extension
                 const isChannelWatch = document.querySelector("[data-a-page-loaded-name=\"ChannelWatchPage\"]");
                 if (isChannelWatch) {
-                    const timer = setInterval(function() {
+                    const timer = setInterval(function () {
                         if (iterations >= maxIterations) {
                             clearInterval(timer);
                             return;

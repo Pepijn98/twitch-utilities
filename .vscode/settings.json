@@ -1,3 +1,5 @@
 {
-    "deepscan.ignoreConfirmWarning": true
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
 }
